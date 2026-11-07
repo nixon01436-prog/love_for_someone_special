@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffb6c9, #ffe4ec);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    background: rgba(255,255,255,0.9);
+    padding: 35px 25px;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(180, 50, 90, 0.2);
+}
+
+.rose {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    color: #d6336c;
+    margin-bottom: 15px;
+}
+
+.intro {
+    color: #79505e;
+    line-height: 1.7;
+}
+
+.heart {
+    font-size: 45px;
+    margin: 20px;
+    animation: beat 1s infinite;
+}
+
+button {
+    background: #e83e70;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #bd2455;
+    transform: scale(1.05);
+}
+
+#letter {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff0f5;
+    border-radius: 18px;
+    color: #754253;
+    line-height: 1.8;
+}
+
+#letter h2 {
+    color: #d6336c;
+    margin-bottom: 15px;
+}
+
+#letter h3 {
+    margin-top: 20px;
+    color: #d6336c;
+}
+
+.signature {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    color: #94435f;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.floating-heart {
+    position: fixed;
+    bottom: -30px;
+    animation: floatUp 7s linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes beat {
+    50% {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 28px 18px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+}
